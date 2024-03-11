@@ -1,30 +1,57 @@
-# React + TypeScript + Vite
+# Contexto React com TypeScript: Ativar/Desativar Estado
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Este projeto é um exemplo simples de como criar e usar um contexto no React com TypeScript para controlar o estado de ativação/desativação.
 
-Currently, two official plugins are available:
+## Objetivo
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+O objetivo deste aplicativo é demonstrar como criar um contexto no React usando TypeScript para gerenciar o estado de ativação/desativação em um aplicativo.
 
-## Expanding the ESLint configuration
+## Funcionalidades
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+- Ativar e desativar um estado usando um contexto React.
+- Mostrar como encapsular o estado e as funções relacionadas em um contexto para compartilhá-lo entre componentes.
 
-- Configure the top-level `parserOptions` property like this:
+## Como usar
 
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
+1. Clone este repositório em sua máquina local:
 
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
+``` https://github.com/Xavierdev23/context.git ```
+
+2. Navegue até o diretório do projeto:
+``` cd useContext ```
+
+3. Instale as dependências:
+```npm i ``` ou ```npm install ```
+
+4. Inicie o servidor de desenvolvimento:
+```npm run dev ```
+
+5. Abra o navegador e vá para [http://localhost:5173](http://localhost:5173) para ver o aplicativo em ação.
+
+## Estrutura do Projeto
+
+O projeto segue uma estrutura de diretórios padrão do React:
+
+- `src/`: Contém todo o código-fonte do aplicativo.
+  - `Produto/index.tsx`: Componente React do aplicativo Produto.
+  - `contexts/index.tsx`: Definições e lógica relacionadas aos contextos do aplicativo.
+  - `App.tsx`: Componente que chama o Produto para renderização.
+  - `main.tsx`: Componente principal da aplicação.
+
+## Como criar um contexto
+
+Este aplicativo demonstra como criar um contexto no React usando TypeScript.
+
+1. Defina o tipo de dados para o contexto.
+2. Crie um contexto usando `createContext` do React.
+3. Crie um provedor de contexto para encapsular os dados e fornecê-los aos componentes filho.
+4. Use o provedor de contexto em torno dos componentes que precisam acessar os dados do contexto.
+5. Consuma o contexto nos componentes filho usando o hook `useContext`.
+
+## Contribuição
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir problemas (issues) e enviar pull requests para melhorar este projeto.
+
+## Licença
+
+Este projeto está licenciado sob a [Licença MIT](LICENSE).
